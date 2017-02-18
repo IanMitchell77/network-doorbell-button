@@ -1,3 +1,3 @@
 #/bin/sh
 
-echo doorbell-button-press | nc -u 255.255.255.255 4950
+echo doorbell-button-press | nc -u 192.168.0.255 4950
