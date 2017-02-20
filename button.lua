@@ -1,6 +1,9 @@
 wifi.setmode(wifi.STATION)
+-- in the house
+--wifi.sta.config("SKYB2595","XNTRRWRQYB")
 
-wifi.sta.config("SKYB2595","XNTRRWRQYB")
+-- in the office
+wifi.sta.config("Mitchsoft","davethecat")
 
 wifi.sta.connect()
 tmr.alarm(1, 1000, 1, function()
@@ -21,6 +24,7 @@ tmr.alarm(1, 1000, 1, function()
 end)
 
 function sendButtonPress()
+  print("Sending a button press!")
   local socket =  net.createUDPSocket() 
   socket:send( 4950, "192.168.0.255", "doorbell-button-press")
 end
