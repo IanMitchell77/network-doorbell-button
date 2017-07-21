@@ -21,8 +21,11 @@
 //const char* ssid = "VM6339503";
 //const char* password = "zdhzmcFCy2vr";
 //sky 4 desk
-const char* ssid = "SKYFB337";
-const char* password = "XDSUPDAU";
+//const char* ssid = "SKYFB337";
+//const char* password = "XDSUPDAU";
+// in the home office
+const char* ssid="mitchsoft";
+const char* password="davethecat";
 
 WiFiUDP UDP;
 
@@ -59,7 +62,7 @@ void setup() {
 
     delay(20);
 
-    // Sleep
+    // Sleep - pull the reset pin low to restart
     Serial.println("ESP8266 in sleep mode");
     ESP.deepSleep(0);
 }
